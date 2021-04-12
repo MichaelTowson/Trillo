@@ -2,16 +2,23 @@
   "name": "Trillo",
   "version": "1.0.0",
   "description": "A template for a travel reservation website",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch:sass": "node-sass static/sass/main.scss static/css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output style compressed",
+    "compile:sass": "node-sass static/sass/main.scss static/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' static/css/style.comp.css -o static/css/style.prefix.css",
+    "compress:css": "node-sass static/css/style.prefix.css css/style.css --output style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "author": "Michael Towson",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "concat": "^1.0.3",
+    "autoprefixer": "^7.1.4",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
+  }
 }
