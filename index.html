@@ -16,6 +16,8 @@
     <div class="container">
         <header class="header">
             <img src="static/img/logo.png" alt="trillo logo">
+            
+            <!-- Search Bar with SVG Search Icon -->
             <form action="#" class ="search">
                 <input type="text" class="search__input" placeholder="Search Hotels">
                 <button class="search__button">
@@ -24,6 +26,33 @@
                     </svg>
                 </button>
             </form>
+
+            <nav class="user-nav">
+                
+                <!-- Bookmark Icon in Nav Bar -->
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="static/img/sprite.svg#icon-bookmark"></use>
+                    </svg>
+                        <!-- --Notification Icon -->
+                    <span class="user-nav__notifcation">7</span>
+                </div>
+                
+                <!-- Chat Icon in Nav Bar -->
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="static/img/sprite.svg#icon-chat"></use>
+                    </svg>
+                        <!-- --Notification Icon -->
+                    <span class="user-nav__notification">13</span>
+                </div>
+
+                <!-- User Icon in Nav Bar: Custom Account Picture -->
+                <div class="user-nav__user">
+                    <img src="static/img/user.jpg" alt="User Photo" class="user-nav__user-photo">
+                    <span class="user-nav__user-name">Jonas</span>
+                </div>
+            </nav>
             Header part
         </header>
 
